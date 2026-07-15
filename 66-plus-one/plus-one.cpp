@@ -10,7 +10,7 @@ public:
                 return digits;
             }
         }
-        digits.resize(digits.size()+1,0);
+        digits.push_back(0);
         digits[0]=1;
         return digits;
 
