@@ -22,9 +22,8 @@ public:
                 s2=nums[i];
             }
         }
-        int a =l1*l2;
-        int b=s1*s2;
+        int a =(l1*l2) - (s1*s2);
 
-        return a-b;
+        return a;
     }
 };
