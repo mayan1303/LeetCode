@@ -7,8 +7,7 @@ public:
 
         while(r<n){
             if(!mp.count(s[r])){
-                mp[s[r]]=r;
-                
+                mp[s[r]]=r;   
             }
             else{
                 l = max(l, mp[s[r]] + 1);
