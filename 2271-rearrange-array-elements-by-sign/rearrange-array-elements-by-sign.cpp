@@ -5,18 +5,14 @@ public:
         vector<int>ans(n);
         int i=0,j=1,k=0;
 
-        while(j<n || i<n){
+        for(int k=0;k<n;k++){
             if(nums[k]>0){
                 ans[i]=nums[k];
-                k++;
-                i+=2;
-                
+                i+=2; 
             }
             else if(nums[k]<0){
                 ans[j]=nums[k];
-                k++;
                 j+=2;
-                
             }
         }
     return ans;
