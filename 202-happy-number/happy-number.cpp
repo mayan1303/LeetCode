@@ -1,21 +1,27 @@
 class Solution {
 public:
+    int SquareSum(int n) {
+    int sum = 0;
+
+    while (n > 0) {
+        int digit = n % 10;
+        sum += digit * digit;
+        n /= 10;
+    }
+
+    return sum;
+    }
+
+
     bool isHappy(int n) {
-        int sum=0;
-        unordered_set<int> s;
-
-        while(n!=1 and !s.count(n)){
-            s.insert(n);
-            int sum=0;
-            int temp=n;
-            while(temp>0){
-                int digit=temp%10;
-                sum+=digit * digit;
-                temp/=10;
-            }
-
-            n=sum;
+        int slow=SquareSum(n);
+        int fast=SquareSum(SquareSum(n));
+        while(slow!=fast){
+            slow=SquareSum(slow);
+            fast=SquareSum(SquareSum(fast));
         }
-        return n==1;
+
+        return slow==1;
+    
     }
 };
