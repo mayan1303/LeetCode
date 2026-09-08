@@ -22,6 +22,7 @@ public:
         if(!root->left && !root->right){
             if(sum==targetSum){
                 ans.push_back(d);
+                d.pop_back();
             }
         }
         else{
