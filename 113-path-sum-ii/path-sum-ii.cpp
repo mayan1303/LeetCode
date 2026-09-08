@@ -28,6 +28,7 @@ public:
         else{
             helper(root->left,sum,targetSum,d);
             helper(root->right,sum,targetSum,d);
+            d.pop_back();
         }
     }
 
