@@ -24,6 +24,7 @@ public:
     }
 
     void reorderList(ListNode* head) {
+        if(!head || !head->next ) return;
         ListNode* curr=head;
         ListNode* slow=head;
         ListNode* fast=head;
