@@ -20,7 +20,7 @@ public:
                 }
 
             }
-            else if(nums[l]+nums[r]<target){
+            else if(sum<target){
                 l++;
             }
             else{
