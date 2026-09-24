@@ -8,14 +8,11 @@ public:
         }
 
         int i=k;
-        int f=-1;
-        while(f==-1){
-            if(s.count(i)){
+        
+        while(s.count(i)){
+            
                 i+=k;
-            }
-            else{
-                f=0;
-            }
+            
         }
 
         return i;
