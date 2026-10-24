@@ -1,19 +1,6 @@
 class Solution {
 public:
 
-    int check(char c){
-        int f=0;
-        int i=0;
-        string a="0123456789";
-        while(f==0 && i!=a.size()){
-            if(c==a[i]){
-                f=1;
-                return i;
-            }
-            i++;
-        }
-        return -1;
-    }
     int myAtoi(string s) {
         int n=s.size();
         long long ans=0;
@@ -32,9 +19,12 @@ public:
         
         //convert digits
         while(i<n){
-            int d=check(s[i]);
 
-            if(d==-1) break;
+            if(s[i]<'0' || s[i]>'9') break;
+
+            int d=s[i]-'0';
+
+            
 
             ans= ans*10 + d;
 
