@@ -22,9 +22,6 @@ public:
         return sum;
     }
 
-
-
-
     int countIslands(vector<vector<int>>& grid, int k) {
         int n=grid.size();
         int m=grid[0].size();
@@ -38,7 +35,6 @@ public:
 
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                sum=0;
                 if(grid[i][j]>0 && vis[i][j]==false){
                 sum=dfs(grid , n, m, i, j, vis);
                 if(sum%k == 0) res++;
