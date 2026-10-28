@@ -1,7 +1,7 @@
 class Solution {
 public:
     int findLHS(vector<int>& nums) {
-        map<int,int> mp;
+        unordered_map<int,int> mp;
         int ans=0;
         for(int i=0;i<nums.size();i++){
             if(!mp.count(nums[i])){
@@ -10,13 +10,11 @@ public:
             else mp[nums[i]]++;
         }
         int n=mp.size();
-        int f=0;
         for (auto &pr : mp) {
             int num=pr.first;
             int freq=pr.second;
 
             if(mp.count(num+1)){
-                f=1;
                 int len=freq+mp[num+1];
                 ans=max(len,ans);
             }
